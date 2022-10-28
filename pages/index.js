@@ -30,8 +30,8 @@ export default function Home() {
     console.log(dayMode)
   }
 
-  const [showResults, setShowResults] = useState(false)
-  const showMore = () => setShowResults(true)
+  const [showDetail, setShowDetail] = useState(false)
+  const showDetails = () => setShowDetail(true)
 
   const [showAll, setShowAll] = useState(false)
   const showRest = () => setShowAll(true)
@@ -39,19 +39,33 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Garv's Space</title>
-        <meta name="Garv Pandey" content="Some text about a tech Enthusiast named Garv" />
+        <meta name="Garv Pandey" content="Some text about Garv Pandey" />
         <link rel="icon" href="/namaste.ico" />
       </Head>
       <main className={styles.main}>
-        <h2>Hello, I'm Garv Pandey,</h2>
-        <div><h2>I talk about</h2>  <h2 className='gif-text'>{tech}</h2></div>
-        {showResults ? <div id="results" className="search-results">
-          <p>I'm a Computer Science Engineer <img src="/thumbs-up-engineer.gif" alt="" /><button className='normal-btn' onClick={showRest}>Know More About me</button></p>
-        </div> : null}
-        {showAll ? <div id="allContent" className='all-rest'>
-          <p>I'm a Computer Science Engineer graduated from GD Goenka University in 2022</p>
-        </div> : null}
+        <div className='Landing-Body'>
+          <h2>Hello, I'm <button className='gif-text' onClick={showDetail}>Garv Pandey</button></h2>
+          <div><h2>A student who talks about</h2>  <h2 className='gif-text'>{tech}</h2></div>
+        </div>
 
+        <div className='Body-2-Light'>
+          <h2>You're still here?</h2>
+          <div id="allContent" className='all-rest'>
+            <h2>I'm a Computer Science Engineer graduated from GD Goenka University in 2022</h2>
+          </div>
+        </div>
+        <div className='Body-3-Light'>
+          <h2>You're still here?</h2>
+          <div id="allContent" className='all-rest'>
+            <h2>I'm a Computer Science Engineer graduated from GD Goenka University in 2022</h2>
+          </div>
+        </div>
+        <div className='Body-4-Light'>
+          <h2 className='FjQZh'>You're still here?</h2>
+          <div id="allContent" className='all-rest'>
+            <h2>I'm a Computer Science Engineer graduated from GD Goenka University in 2022</h2>
+          </div>
+        </div>
 
       </main>
 
